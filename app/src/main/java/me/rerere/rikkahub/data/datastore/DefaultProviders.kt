@@ -287,6 +287,56 @@ val DEFAULT_PROVIDERS = listOf(
         builtIn = true,
     ),
     ProviderSetting.OpenAI(
+        id = Uuid.parse("796ba47b-d704-5c91-8bc5-6431d39a8ae0"),
+        name = "OpenCode Go",
+        baseUrl = "https://opencode.ai/zen/go/v1",
+        apiKey = "",
+        enabled = false,
+        builtIn = true,
+        description = {
+            Text(
+                text = buildAnnotatedString {
+                    append("OpenCode Go 聚合了国产前沿模型 (DeepSeek, GLM, Kimi, MiMo, MiniMax, Qwen, Grok 等)，统一 OpenAI 兼容接口。")
+                    appendLine()
+                    append("文档：")
+                    withLink(LinkAnnotation.Url("https://opencode.ai/docs/go")) {
+                        withStyle(SpanStyle(MaterialTheme.colorScheme.primary)) {
+                            append("https://opencode.ai/docs/go")
+                        }
+                    }
+                }
+            )
+        },
+        shortDescription = {
+            Text("国产前沿模型聚合 (DeepSeek / GLM / Kimi / Qwen 等)")
+        }
+    ),
+    ProviderSetting.OpenAI(
+        id = Uuid.parse("7263fb4b-6088-514c-819c-24bb77c6c913"),
+        name = "OpenCode Zen",
+        baseUrl = "https://opencode.ai/zen/v1",
+        apiKey = "",
+        enabled = false,
+        builtIn = true,
+        description = {
+            Text(
+                text = buildAnnotatedString {
+                    append("OpenCode Zen 聚合了 GPT, Claude, Gemini, Grok, DeepSeek 等主流模型，统一 OpenAI 兼容接口，并提供部分免费模型。")
+                    appendLine()
+                    append("文档：")
+                    withLink(LinkAnnotation.Url("https://opencode.ai/docs/zen")) {
+                        withStyle(SpanStyle(MaterialTheme.colorScheme.primary)) {
+                            append("https://opencode.ai/docs/zen")
+                        }
+                    }
+                }
+            )
+        },
+        shortDescription = {
+            Text("主流模型聚合 (GPT / Claude / Gemini / Grok 等)，含免费模型")
+        }
+    ),
+    ProviderSetting.OpenAI(
         id = Uuid.parse("53027b08-1b58-43d5-90ed-29173203e3d8"),
         name = "AckAI",
         baseUrl = "https://ackai.fun/v1",
